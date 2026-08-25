@@ -45,36 +45,40 @@ Android App <-- SSE ------ http://127.0.0.1:3080/api/events.mux
 
 ### 3. Git LFS
 
-`androidApp/src/main/assets/payload.zip` 约 115 MB，使用 Git LFS 存储：
+`payload.zip` 约 115 MB，用 Git LFS 存。没装过可以先：
 
 ```bash
 brew install git-lfs        # macOS
 git lfs install
-git lfs pull
-ls -lh androidApp/src/main/assets/payload.zip
 ```
 
-如果文件只有一百多字节，说明仍是 LFS 指针，需要再执行 `git lfs pull`。
+克隆后若文件只有一百多字节，再执行 `git lfs pull`。
 
-## 获取源码
+## 怎么启动
+
+1. 手机上安装并**启动 Shizuku**，确认状态是正在运行（不是只装着 App）。
+2. 克隆仓库并拉下约 115 MB 的运行时：
 
 ```bash
 git lfs install
 git clone https://github.com/yukiykchen/deepseek-harness-local.git
 cd deepseek-harness-local
 git lfs pull
+ls -lh androidApp/src/main/assets/payload.zip   # 应约 115M，不是一百多字节
 ```
 
-## 构建
+3. 装到手机：
 
 ```bash
-./gradlew :androidApp:assembleDebug
 ./gradlew :androidApp:installDebug
 ```
 
-`applicationId` 为 `com.example.dsh.local`，桌面名 **DSH Local**。
+或用 Android Studio 打开本仓库根目录，运行 `androidApp` 模块。包名 `com.example.dsh.local`，桌面名 **DSH Local**。
 
-首次启动会从 `payload.zip` 解压 Node.js、Harness 和依赖，可能较慢。运行时版本由 `androidApp/src/main/assets/dshroot_revision.txt` 控制。
+4. 打开 App，点 **进入本地 Agent**。首次会解压 `payload.zip`，可能较慢。
+5. 内核就绪后在界面里填写 DeepSeek API Key，再创建会话发消息。
+
+运行时版本由 `androidApp/src/main/assets/dshroot_revision.txt` 控制。只改 UI 不会更新 zip 里的 Harness。
 
 ## 工作原理
 
