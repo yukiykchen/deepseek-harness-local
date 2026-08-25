@@ -4,7 +4,7 @@
 
 本工程只做 **手机本地** 模式：把 Node.js Runtime 和编译后的 Harness 打进 APK，在 `127.0.0.1:3080` 启动本机 Host。
 
-扫码连接电脑或 SSH 请使用 **DSH Mobile**（`com.example.dsh`）。两个 App 包名不同，可以同时安装。
+扫码连接电脑或 SSH 请使用 **[DSH Mobile](https://github.com/yukiykchen/deepseek-harness-mobile)**（`com.example.dsh`）。两个 App 包名不同，可以同时安装。
 
 > 当前项目处于开发和验证阶段，包体较大（主要来自 `payload.zip`）、首次启动需要解压。请不要把它当作生产版本使用。
 
@@ -55,6 +55,15 @@ ls -lh androidApp/src/main/assets/payload.zip
 ```
 
 如果文件只有一百多字节，说明仍是 LFS 指针，需要再执行 `git lfs pull`。
+
+## 获取源码
+
+```bash
+git lfs install
+git clone https://github.com/yukiykchen/deepseek-harness-local.git
+cd deepseek-harness-local
+git lfs pull
+```
 
 ## 构建
 
