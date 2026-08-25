@@ -1,0 +1,41 @@
+PODS:
+  - KuiklyWebviewIOS (1.0.0):
+    - OpenKuiklyIOSRender
+  - OpenKuiklyIOSRender (2.7.0)
+  - SDWebImage (5.21.7):
+    - SDWebImage/Core (= 5.21.7)
+  - SDWebImage/Core (5.21.7)
+  - shared (1.0)
+
+DEPENDENCIES:
+  - KuiklyWebviewIOS (from `https://github.com/Kuikly-contrib/KuiklyWebview.git`, tag `1.0.0`)
+  - OpenKuiklyIOSRender (~> 2.7.0)
+  - SDWebImage
+  - shared (from `../shared`)
+
+SPEC REPOS:
+  trunk:
+    - OpenKuiklyIOSRender
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  KuiklyWebviewIOS:
+    :git: https://github.com/Kuikly-contrib/KuiklyWebview.git
+    :tag: 1.0.0
+  shared:
+    :path: "../shared"
+
+CHECKOUT OPTIONS:
+  KuiklyWebviewIOS:
+    :git: https://github.com/Kuikly-contrib/KuiklyWebview.git
+    :tag: 1.0.0
+
+SPEC CHECKSUMS:
+  KuiklyWebviewIOS: ee364aedfbd65165016192041811e6f6491763a7
+  OpenKuiklyIOSRender: 2e6f7be3adae40f8167bb56a3e6803d1b18fd16e
+  SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
+  shared: d8b6d38fd437245727fc107299c3f3235c5baae4
+
+PODFILE CHECKSUM: e9580c7b567897cf92644fe97fbcc7a9953401fc
+
+COCOAPODS: 1.16.2
