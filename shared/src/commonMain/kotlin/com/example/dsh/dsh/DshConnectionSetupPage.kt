@@ -98,6 +98,7 @@ internal class DshConnectionSetupPage : BasePager() {
         acquireModule<RouterModule>(RouterModule.MODULE_NAME).openPage("home", JSONObject().apply {
             put("pageName", "home")
             put("connectionMode", "local")
+            put("embeddedEngine", true)
             put("profileId", DshSessionScope.DEFAULT_REMOTE_PROFILE_ID)
         })
     }
